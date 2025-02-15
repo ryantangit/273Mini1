@@ -1,3 +1,8 @@
 # mini1 
 
-- hello hello
+
+## Compilation
+
+- create a new directory
+- cmake [directory where CMakeList is]
+- cmake --build .

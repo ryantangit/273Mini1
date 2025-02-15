@@ -30,7 +30,6 @@ class CSVParser {
 					std::cout << line << std::endl;
 				}
 		}
-		
 
 		// Setters and Getters
 		void setFilename(std::string filename){
@@ -50,7 +49,7 @@ class CSVParser {
 };
 
 int main() {
-		CSVParser parser = CSVParser("hello.csv");
+		CSVParser parser = CSVParser("../csv/hello.csv");
 		try {
 			parser.init();
 			parser.readLine();
