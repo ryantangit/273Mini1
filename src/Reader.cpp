@@ -1,5 +1,5 @@
 #include <stdexcept>
-#include "reader.h"
+#include "Reader.h"
 
 		CSVReader::CSVReader(std::string filename, bool firstLineHeader=true) {
 			this->filename = filename;
