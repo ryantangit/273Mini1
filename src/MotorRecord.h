@@ -3,7 +3,7 @@
 
 #include <iostream>
 
-struct MotorRecords {
+struct MotorRecord {
 	std::string crashDate;			
 	std::string crashTime;
 	std::string borough;
