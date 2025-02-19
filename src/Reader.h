@@ -16,10 +16,10 @@ class CSVReader {
 		std::string readLine();
 
 		// Setters and Getters
-			void setFilename(std::string filename) { this->filename = filename; }
-			std::string getFilename() { return this->filename; }
-			void setFirstLineHeader(bool firstLineHeader) { this->firstLineHeader = firstLineHeader; }
-			bool getFirstLineHeader(){ return this->firstLineHeader; }
+		void setFilename(std::string filename) { this->filename = filename; }
+		std::string getFilename() { return this->filename; }
+		void setFirstLineHeader(bool firstLineHeader) { this->firstLineHeader = firstLineHeader; }
+		bool getFirstLineHeader(){ return this->firstLineHeader; }
 };	
 
 #endif 
