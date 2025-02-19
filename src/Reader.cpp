@@ -4,9 +4,6 @@
 CSVReader::CSVReader(std::string filename, bool firstLineHeader=true) {
 	this->filename = filename;
 	this->firstLineHeader = firstLineHeader;	
-}
-
-void CSVReader::init() {
 	this->filestream.open(this->getFilename());
 	if(!this->filestream.is_open()){ 
 	throw std::runtime_error("Runtime Exception: Unable to open file: " + this->getFilename());	

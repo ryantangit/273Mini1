@@ -11,7 +11,6 @@ class CSVReader {
 		std::fstream filestream;
 	public:
 		CSVReader(std::string filename, bool firstLineHeader);
-		void init();
 		void tearDown();
 		std::string readLine();
 
