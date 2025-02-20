@@ -8,6 +8,11 @@ CSVReader::CSVReader(std::string filename, bool firstLineHeader=true) {
 	if(!this->filestream.is_open()){ 
 	throw std::runtime_error("Runtime Exception: Unable to open file: " + this->getFilename());	
 	}
+
+	if(this->firstLineHeader) {
+		std::string throwAway;
+		getline(this->filestream, throwAway);
+	}
 }
 
 void CSVReader::tearDown() {

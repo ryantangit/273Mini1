@@ -13,7 +13,6 @@ int main() {
 	testCaseMissingValues();
 }
 
-
 void testCaseNormal() {
 	Records testRecord = Records();
 	std::string input = "1,2,3,4";

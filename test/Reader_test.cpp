@@ -1,8 +1,8 @@
-#include "src/Reader.h"
-#include "src/Records.h"
+#include "../src/Reader.h"
+#include "../src/Records.h"
 
 int main() {
-	CSVReader reader = CSVReader("hello.csv", true);	
+	CSVReader reader = CSVReader("csv/hello.csv", false);	
 	std::string testString = reader.readLine();
 	std::cout << testString << std::endl;
 	Records records;

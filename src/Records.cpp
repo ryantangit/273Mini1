@@ -82,5 +82,8 @@ void Records::addRecord(std::vector<std::string> recordAttributes) {
 	motorRecord.vehicleTypeCode4 = recordAttributes[27];
 	motorRecord.vehicleTypeCode5 = recordAttributes[28];
 	records.push_back(motorRecord);
-		
+}
+
+MotorRecord Records::getRecords(int index) {
+	return this->records[index];
 }

@@ -11,6 +11,7 @@ class Records{
 	public:
 		std::vector<std::string> parseRecord(std::string record);
 		void addRecord(std::vector<std::string> recordAttributes);
+		MotorRecord getRecords(int index);
 
 };
 
