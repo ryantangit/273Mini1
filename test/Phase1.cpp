@@ -18,4 +18,3 @@ int main() {
 	auto duration = std::chrono::duration<double>(endTime - startTime);
 	std::cout << "Time taken: " << duration.count() << " seconds" <<std::endl;
 }
-
