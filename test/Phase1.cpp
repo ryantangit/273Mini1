@@ -12,7 +12,6 @@ int main() {
 	while((currentLine = reader.readLine()) != "") {
 		std::vector<std::string> parsedRecord = (records.parseRecord(currentLine));
 		records.addRecord(parsedRecord);
-		std::cout << "line " << i++ << std::endl;
 	}
 	auto endTime = std::chrono::high_resolution_clock::now();
 	auto duration = std::chrono::duration<double>(endTime - startTime);
