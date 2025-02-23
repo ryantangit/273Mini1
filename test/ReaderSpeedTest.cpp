@@ -3,6 +3,7 @@
 #include <chrono>
 #include <vector>
 
+// TESTING HOW LONG IT TAKES TO READ THE CSV FILE AND UPLOAD ALL RECORDS INTO A VECTOR
 int main() {
 	auto startTime = std::chrono::high_resolution_clock::now();
 	CSVReader reader = CSVReader("test/csv/Motor_Vehicle_Collisions_-_Crashes_20250219.csv", true);	
@@ -17,5 +18,4 @@ int main() {
 	auto endTime = std::chrono::high_resolution_clock::now();
 	auto duration = std::chrono::duration<double>(endTime - startTime);
 	std::cout << "Time taken: " << duration.count() << " seconds" <<std::endl;
-
 }

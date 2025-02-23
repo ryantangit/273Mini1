@@ -53,7 +53,7 @@ void RecordVectors::addRecord(std::vector<std::string> recordAttributes) {
 	motorRecordVector.borough.push_back(recordAttributes[2]);
 	intAttribute(motorRecordVector.zipCode, recordAttributes[3]);	
 	dblAttribute(motorRecordVector.latitude, recordAttributes[4]);
-	dblAttribute(motorRecordVector.longitude, recordAttributes[4]);
+	dblAttribute(motorRecordVector.longitude, recordAttributes[5]);
 	motorRecordVector.location.push_back(recordAttributes[6]);
 	motorRecordVector.onStreeName.push_back(recordAttributes[7]);
 	motorRecordVector.crossStreetName.push_back(recordAttributes[8]);
