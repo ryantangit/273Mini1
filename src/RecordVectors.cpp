@@ -1,5 +1,6 @@
 #include "RecordVectors.h"
 
+
 std::vector<std::string> RecordVectors::parseRecord(std::string recordString) {
 	std::vector<std::string> recordAttributes;
 	std::string attribute = "";

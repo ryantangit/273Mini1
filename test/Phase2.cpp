@@ -7,7 +7,7 @@ const size_t CHUNK = 100000;
 
 int main() {
 	auto startTime = std::chrono::high_resolution_clock::now();
-	CSVReader reader = CSVReader("test/csv/Motor_Vehicle_Collisions_-_Crashes_20250210.csv", true);	
+	CSVReader reader = CSVReader("test/csv/Motor_Vehicle_Collisions_-_Crashes_20250219.csv", true);	
 	Records records;
     std::vector<std::string> chunk;
     chunk.reserve(CHUNK);
@@ -34,12 +34,9 @@ int main() {
             #pragma omp for schedule(dynamic, 1000)  
             for (size_t i = 0; i < chunk.size(); ++i) {
                 std::vector<std::string> parsedRecord = localRecords.parseRecord(chunk[i]);  
-                #pragma omp critical //critical region to avoid race condition -> one resource access at a time
                 {
+										#pragma omp critical
                     records.addRecord(parsedRecord);
-                    totalLines++;
-                    // Printing increases time --> decreases efficiency
-                    // std::cout << "Processed " << totalLines << " lines" << std::endl;
                 }
             }
         }

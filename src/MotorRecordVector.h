@@ -4,6 +4,8 @@
 #include <iostream>
 #include <vector>
 
+const size_t CHUNK = 2156579;
+
 struct MotorRecordVector {
 	std::vector<std::string> crashDate;			
 	std::vector<std::string> crashTime;
