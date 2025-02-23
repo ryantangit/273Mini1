@@ -20,4 +20,9 @@
 - Run the binary
 ``` OMP_NUM_THREADS=4 ./phase2 ```
 
+## Records Read and Store Testing
+- Compile
+```clang++ -std=c++11 src/Records.cpp src/Reader.cpp test/ReaderSpeedTest.cpp -o readspeed```
+- Run Binary
+``` ./binary/readspeed ```
 

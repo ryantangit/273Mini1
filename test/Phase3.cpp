@@ -3,18 +3,18 @@
 #include <chrono>
 #include <omp.h>
 
-const size_t LINE_CHUNK = 100000;
+const size_t LINE_CHUNK = 200000;
 
 int main() {
-	RecordVectors records;
 	auto startTime = std::chrono::high_resolution_clock::now();
+	RecordVectors records;
 	CSVReader reader = CSVReader("test/csv/Motor_Vehicle_Collisions_-_Crashes_20250219.csv", true);	
 	std::string currentLine;
 	std::vector<std::string> chunk;
 	chunk.reserve(LINE_CHUNK);
 	while(true){
 		chunk.clear();
-		for (size_t i = 0; i < CHUNK; ++i) {
+		for (size_t i = 0; i < LINE_CHUNK; ++i) {
 				currentLine = reader.readLine();
 				if (currentLine.empty()){
 						break;
